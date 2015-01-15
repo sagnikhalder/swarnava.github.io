@@ -10,7 +10,8 @@
   <link href="style_fix_menu.css" rel="stylesheet" type="text/css">
   <meta name="p:domain_verify" content="4daeff6a40cb64d7d8ef9de9800122d1"/>
   <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="outdatedbrowser/outdatedBrowser.min.css"> 
   <link href="style.css" rel="stylesheet" type="text/css">
   <!-- HTML 5 shim for IE backwards compatibility -->
   <!-- [if lt IE 9]>
@@ -19,6 +20,8 @@
   <![endif]-->
 </head>
 <body>
+  <script src="outdatedbrowser/outdatedBrowser.min.js"></script>
+  <div id="outdated"></div>
   <header>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -84,5 +87,15 @@ Keen Mozilla follower, Tech Geek, Open Source Evangelist. I make things. I am a 
                 s.parentNode.insertBefore(ga, s);
         })();
         </script>
+        <script>
+
+                            //plugin function, place inside DOM ready function
+                            outdatedBrowser({
+                                bgColor: '#f25648',
+                                color: '#ffffff',
+                                lowerThan: 'transform',
+                                languagePath: 'outdatedbrowser/lang/en.html'
+                            })
+        ></script>
   </body>
 </html>
